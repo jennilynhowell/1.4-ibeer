@@ -50,21 +50,23 @@ body {
 
 .header-content {
   position: relative;
-  text-align: center;
+  top: -10px;
+  margin: 0 auto;
   padding: 100px;
 }
 
 .main-heading {
   position: static;
-  font-size: 5em;
+  margin-left: 40%;
+  font-size: 8em;
   font-family: Josefin Sans, Arial, sans-serif;
 }
 
 .sub-heading {
   position: absolute;
-  top: 148px;
-  left: 425px;
-  font-size: 3em;
+  top: 180px;
+  left: 30%;
+  font-size: 4em;
   font-family: Dancing Script, Corsiva, cursive;
   color: #fff;
   text-shadow: 1.5px 1.5px 1.5px #323232;
@@ -74,10 +76,9 @@ body {
 
 /*Flex declared on MAIN parent for blog-row and aside*/
 main {
-  position: absolute;
-  top: 380px;
-  left: 20%;
-  z-index: 2;
+  position: relative;
+  top: -50px;
+  margin: 0 auto;
   display: flex;
   align-items: flex-start;
   background-color: #FEF9EC;
@@ -85,32 +86,24 @@ main {
   box-shadow: 1px 2px 3px 2px #595a5b;
 }
 
-/*Flex declared on blog-row for items*/
+/*Items are just blocks. They will stack on top of each other by default (no flex needed)*/
 .blog-row {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 700px;
+  display: block;
+  width: 900px;
   margin: 40px auto;
 }
 
-/*Flex declared on item for icon-wrapper/meta/primary-txt*/
 .item  {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-start;
-  align-content: center;
   margin: 40px;
   padding: 40px;
   background-color: #fff;
   box-shadow: 1px 1px 2px 2px #595a5b;
-  width: 80%;
 }
 
 .icon-wrapper {
+  position: relative;
+  margin: 0 auto;
+  top: 40px;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -119,39 +112,33 @@ main {
 
 .icon-wrapper i {
   -webkit-filter: invert(100%);
+  margin: 15px 15px 15px 18px;
   /*Searched how to change png color: https://teamtreehouse.com/community/is-it-possible-to-make-a-black-icon-white-using-css*/
 }
 
 .meta {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: flex-start;
-  height: 30px;
-  /*width: 480px;*/
+  height: 20px;
+  margin: 0 auto;
+  border-bottom: 2.5px;
+  border-style: ridge;
+  border-color: #EFEADF;
 }
 
 .date, .category {
-  border-bottom: 2px;
-  border-style: solid;
-  border-color: #EFEADF;
   text-transform: uppercase;
 }
 
 .date {
-  padding-right: 90px;
   float: left;
   text-align: left;
 }
 
 .category {
-  /*padding-left: 60px;*/
   float: right;
   text-align: right;
 }
 
 .entry-title {
-  /*margin-top: 10px;*/
   padding: 20px;
 }
 
@@ -166,16 +153,16 @@ main {
 }
 
 .blog-img {
-  align-self: flex-end;
+  float: right;
+  margin: 15px;
   height: 200px;
   width: 200px;
 }
 
 .primary-txt {
-  align-self: flex-start;
   font-family: 'Noto Serif', Times, serif;
-  font-size: 0.7em;
-  padding: 10px;
+  font-size: 1.2em;
+  margin: 10px;
 }
 
 #dino {
@@ -194,11 +181,11 @@ main {
   background-size: cover;
 }
 
-
 aside {
   position: relative;
-  width: 300px;
-  margin: 40px;
+  width: 400px;
+  margin: 40px 40px 40px 0;
+  padding: 10px;
   background-color: #EFEADF;
   box-shadow: 1px 1px 2px 2px #595a5b;
 }
@@ -222,7 +209,6 @@ aside {
 }
 
 footer {
-  margin-top: 3300px;
   background-color: #2E2D2B;
   text-align: center;
   color: #fff;
