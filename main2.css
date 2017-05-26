@@ -17,6 +17,8 @@ body {
   margin: 0 auto;
 }
 
+/*Nav Bar*/
+
 .nav-row {
   display: flex;
   justify-content: flex;
@@ -37,6 +39,8 @@ body {
 
   text-transform: uppercase;
 }
+
+/*Header*/
 
 .page-header {
   background-image: url("img/header-img.jpg");
@@ -66,10 +70,13 @@ body {
   text-shadow: 1.5px 1.5px 1.5px #323232;
 }
 
+/*BODY*/
+
+/*Flex declared on MAIN parent for blog-row and aside*/
 main {
   position: absolute;
   top: 380px;
-  left: 90px;
+  left: 20%;
   z-index: 2;
   display: flex;
   align-items: flex-start;
@@ -78,67 +85,73 @@ main {
   box-shadow: 1px 2px 3px 2px #595a5b;
 }
 
+/*Flex declared on blog-row for items*/
 .blog-row {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
+  flex-wrap: nowrap;
   width: 700px;
   margin: 40px auto;
 }
 
+/*Flex declared on item for icon-wrapper/meta/primary-txt*/
 .item  {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: center;
   margin: 40px;
   padding: 40px;
   background-color: #fff;
   box-shadow: 1px 1px 2px 2px #595a5b;
-  width: 700px;
+  width: 80%;
 }
 
 .icon-wrapper {
-  position: absolute;
-  padding: 20px;
-  margin-left: 325px;
   border-radius: 50%;
-  width: 50px;
   height: 50px;
+  width: 50px;
   background-color: #EFEADF;
 }
 
 .icon-wrapper i {
-  position: absolute;
-  left: 33%;
-  top: 35%;
   -webkit-filter: invert(100%);
+  /*Searched how to change png color: https://teamtreehouse.com/community/is-it-possible-to-make-a-black-icon-white-using-css*/
 }
 
 .meta {
-  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
   height: 30px;
+  /*width: 480px;*/
 }
 
 .date, .category {
   border-bottom: 2px;
   border-style: solid;
   border-color: #EFEADF;
-  width: 50%;
-  padding: 5px;
   text-transform: uppercase;
-  margin: 10px auto;
 }
 
 .date {
+  padding-right: 90px;
   float: left;
   text-align: left;
 }
 
 .category {
+  /*padding-left: 60px;*/
   float: right;
   text-align: right;
 }
 
 .entry-title {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   padding: 20px;
 }
 
@@ -153,40 +166,32 @@ main {
 }
 
 .blog-img {
-  float: right;
-  width: 40%;
+  align-self: flex-end;
+  height: 200px;
+  width: 200px;
+}
+
+.primary-txt {
+  align-self: flex-start;
+  font-family: 'Noto Serif', Times, serif;
+  font-size: 0.7em;
+  padding: 10px;
 }
 
 #dino {
   background-image: url("img/dino.jpg");
   background-size: cover;
-  height: 200px;
-  width: 150px;
-  text-align: right;
 }
 
 #xx {
   background-image: url("img/xx.png");
   background-size: cover;
-  height: 200px;
-  width: 250px;
-  left: 33%;
-  text-align: right;
+  background-position: center;
 }
 
 #yhact-img {
   background-image: url("img/yhact.jpg");
   background-size: cover;
-  height: 250px;
-  width: 250px;
-  text-align: right;
-}
-
-.primary-txt {
-  float: left;
-  margin: 20px;
-  font-family: 'Noto Serif', Times, serif;
-  font-size: 1.2em;
 }
 
 
@@ -216,15 +221,8 @@ aside {
   border-color: #2E2D2B;
 }
 
-.primary-txt {
-  display: inline-block;
-  margin: 20px;
-  font-family: 'Noto Serif', Times, serif;
-  font-size: 1.2em;
-}
-
 footer {
-  margin-top: 2800px;
+  margin-top: 3300px;
   background-color: #2E2D2B;
   text-align: center;
   color: #fff;
