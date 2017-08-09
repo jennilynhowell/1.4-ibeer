@@ -1,7 +1,7 @@
 # 1.4-ibeer
 TIY Week 1, Day 4: iBeer CSS Project (flexbox)
 
-##Master element display types and use flexbox/inline-block where appropriate.
+## Master element display types and use flexbox/inline-block where appropriate.
 
 For this project we were given HTML and a mockup, and required to style the elements to spec.
 
